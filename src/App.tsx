@@ -17,17 +17,17 @@ function App() {
             </h1>
           </div>
           <div>
-            <p className=" mb-4">
+            <p className="mb-4 text-gray-500">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
-            <button className="mb-4 bg-orange-600 p-3 py-1 text-white">
+            <button className="mb-4 bg-orange-600 px-8 py-2 uppercase tracking-[.2rem] text-white">
               Read more
             </button>
           </div>
 
-          <div className=" bg-slate-950 p-4 text-white">
+          <div className=" my-4 bg-slate-950 p-4 text-white">
             <h2 className="text-4xl text-orange-300">New</h2>
             <div className="border-b py-4">
               <h3 className="mb-2 text-xl font-bold">
@@ -57,42 +57,52 @@ function App() {
             </div>
           </div>
 
-          <div className="">
-            <div className="grid grid-cols-2 gap-4">
+          {/* 1 2 3 section */}
+          <div className="my-4 mb-16 grid gap-8">
+            {/* <div className="grid grid-cols-2"> */}
+            <div className="flex">
               <img
-                className=" row-span-3"
+                className="row-span-3 h-36"
                 src="./assets/images/image-retro-pcs.jpg"
                 alt=""
               />
-              <h2 className="text-xl font-bold text-gray-500">01</h2>
-              <h3>Reviving Retro PCs</h3>
-              <p className="text-gray-500">
-                What happens when old PCs are given modern upgrades?
-              </p>
+              <div className="ml-4">
+                <h2 className="mb-4 text-3xl font-bold text-gray-500">01</h2>
+                <h3 className="mb-4 text-lg font-bold">Reviving Retro PCs</h3>
+                <p className="text-gray-500">
+                  What happens when old PCs are given modern upgrades?
+                </p>
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex">
               <img
-                className=" row-span-3"
+                className="row-span-3 h-36"
                 src="./assets/images/image-top-laptops.jpg"
                 alt=""
               />
-              <h2 className="text-xl font-bold text-gray-500">02</h2>
-              <h3>Top 10 Laptops of 2022</h3>
-              <p className="text-gray-500">
-                Our best picks for various needs and budgets.
-              </p>
+              <div className="ml-4">
+                <h2 className="mb-4 text-3xl font-bold text-gray-500">02</h2>
+                <h3 className="mb-4 text-lg font-bold">
+                  Top 10 Laptops of 2022
+                </h3>
+                <p className="text-gray-500">
+                  Our best picks for various needs and budgets.
+                </p>
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex">
               <img
-                className=" row-span-3"
+                className="row-span-3 h-36"
                 src="./assets/images/image-gaming-growth.jpg"
                 alt=""
               />
-              <h2 className="text-xl font-bold text-gray-500">03</h2>
-              <h3>The Growth of Gaming</h3>
-              <p className="text-gray-500">
-                How the pandemic has sparked fresh opportunities.
-              </p>
+              <div className="ml-4">
+                <h2 className="mb-4 text-3xl font-bold text-gray-500">03</h2>
+                <h3 className="mb-4 text-lg font-bold">The Growth of Gaming</h3>
+                <p className="text-gray-500">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
