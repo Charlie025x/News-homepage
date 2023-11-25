@@ -7,9 +7,13 @@ function App() {
           <img src="./assets/images/icon-menu.svg" alt="" />
         </nav>
 
-        <div className="mx-4 grid justify-center gap-4 lg:grid-cols-3">
-          <div>
-            <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+        <div className="mx-4 grid max-w-5xl justify-center gap-4 lg:mx-auto lg:grid-cols-3">
+          <div className="max-h-[300px] lg:col-span-2 lg:max-h-[250px]">
+            <img
+              className="max-h-[300px] w-full object-cover lg:max-h-[250px]"
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt=""
+            />
           </div>
           <div>
             <h1 className=" text-5xl font-bold">
@@ -27,8 +31,8 @@ function App() {
             </button>
           </div>
 
-          <div className=" my-4 bg-slate-950 p-4 text-white">
-            <h2 className="text-4xl text-orange-300">New</h2>
+          <div className="my-4 bg-slate-950 p-4 text-white lg:col-start-3 lg:row-span-2 lg:row-start-1 lg:my-0">
+            <h2 className="text-4xl font-bold text-orange-300">New</h2>
             <div className="border-b py-4">
               <h3 className="mb-2 text-xl font-bold">
                 Hydrogen VS Electric Cars
@@ -58,11 +62,11 @@ function App() {
           </div>
 
           {/* 1 2 3 section */}
-          <div className="my-4 mb-16 grid gap-8">
+          <div className="my-4 mb-16 grid gap-8 lg:col-span-3 lg:grid-cols-3">
             {/* <div className="grid grid-cols-2"> */}
             <div className="flex">
               <img
-                className="row-span-3 h-36"
+                className="row-span-3 h-36 object-cover lg:w-[90px]"
                 src="./assets/images/image-retro-pcs.jpg"
                 alt=""
               />
@@ -76,7 +80,7 @@ function App() {
             </div>
             <div className="flex">
               <img
-                className="row-span-3 h-36"
+                className="row-span-3 h-36 object-cover lg:w-[90px]"
                 src="./assets/images/image-top-laptops.jpg"
                 alt=""
               />
@@ -92,7 +96,7 @@ function App() {
             </div>
             <div className="flex">
               <img
-                className="row-span-3 h-36"
+                className="row-span-3 h-36 object-cover lg:w-[90px]"
                 src="./assets/images/image-gaming-growth.jpg"
                 alt=""
               />
