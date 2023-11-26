@@ -1,10 +1,51 @@
+import { useState } from "react";
+
 function App() {
+  let Links = [
+    { name: "Home" },
+    { name: "New" },
+    { name: "Popular" },
+    { name: "Trending" },
+    { name: "Categories" },
+  ];
+
+  let [navOpen, setNavOpen] = useState(false);
+
   return (
     <>
       <div>
-        <nav className="flex justify-between p-4">
+        <nav className="mx-auto max-w-5xl p-4 lg:flex lg:items-center lg:justify-between lg:px-0 lg:py-8">
           <img src="./assets/images/logo.svg" alt="" />
-          <img src="./assets/images/icon-menu.svg" alt="" />
+          <img
+            className="absolute right-4 top-6 z-10 lg:hidden"
+            src={
+              navOpen
+                ? "./assets/images/icon-menu-close.svg"
+                : "./assets/images/icon-menu.svg"
+            }
+            onClick={() => setNavOpen(!navOpen)}
+          />
+
+          {/* nav overlay */}
+          {navOpen ? (
+            <div className="absolute inset-0 bg-black opacity-40 transition-all"></div>
+          ) : null}
+
+          <ul
+            className={`max-lg:absolute max-lg:inset-0 max-lg:bg-white max-lg:pl-4 max-lg:pt-[200px] max-lg:transition-all max-lg:duration-200 max-lg:ease-in lg:flex lg:items-center ${
+              navOpen ? "max-lg:left-1/3" : "max-lg:left-full"
+            }`}
+          >
+            {Links.map((link) => (
+              <li
+                key={link.name}
+                className="cursor-pointer hover:text-orange-600 max-lg:my-4 max-lg:font-bold lg:ml-8 lg:text-gray-500"
+              >
+                {link.name}
+              </li>
+            ))}
+          </ul>
+          {/* <img src="./assets/images/icon-menu.svg" alt="" /> */}
         </nav>
 
         <div className="mx-4 grid max-w-5xl justify-center gap-4 lg:mx-auto lg:grid-cols-3">
@@ -12,7 +53,7 @@ function App() {
             <img
               className="max-h-[300px] w-full object-cover lg:max-h-[250px]"
               src="./assets/images/image-web-3-mobile.jpg"
-              alt=""
+              srcSet="./assets/images/image-web-3-desktop.jpg 1024w"
             />
           </div>
           <div>
