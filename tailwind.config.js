@@ -5,4 +5,5 @@ export default {
     extend: {},
   },
   plugins: [],
+  base: "/News-homepage/",
 };
